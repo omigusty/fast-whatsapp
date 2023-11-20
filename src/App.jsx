@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 export default function App() {
   const [nomorTelepon, setNomorTelepon] = useState(0);
@@ -16,7 +15,7 @@ export default function App() {
   };
 
   return (
-    <div className="dark:bg-slate-900 bg-gray-100 flex h-screen items-center py-16">
+    <div className="dark:bg-slate-900 bg-gray-100 flex h-screen items-center">
       <main class="w-full max-w-md mx-auto p-6">
         <div class="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
           <div class="p-4 sm:p-7">
