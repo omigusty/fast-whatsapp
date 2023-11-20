@@ -7,7 +7,8 @@ export default function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      const externalLink = `https://api.whatsapp.com/send/?phone=${nomorTelepon}&text&type=phone_number&app_absent=0`;
+      // const externalLink = `https://api.whatsapp.com/send/?phone=+62${nomorTelepon}&text&type=phone_number&app_absent=0`;
+      const externalLink = `https://wa.me/+62${nomorTelepon}`;
       window.location.href = externalLink;
     } catch (error) {
       console.log(error);
