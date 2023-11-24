@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import Button from "../Button/Index";
+// import parsePhoneNumber from "libphonenumber-js";
 
 export default function Form() {
-  const [nomorTelepon, setNomorTelepon] = useState(0);
+  const [inputNumber, setInputNumber] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
       //  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
-      const externalLink = `https://wa.me/+62${nomorTelepon}`;
+      const externalLink = `https://wa.me/+62${inputNumber}`;
       window.location.href = externalLink;
     } catch (error) {
       console.log(error);
@@ -29,10 +30,10 @@ export default function Form() {
             <span className="text-gray-500 sm:text-sm">+62</span>
           </div>
           <input
-            type="number"
+            type="tel"
             min={0}
             onChange={(e) => {
-              setNomorTelepon(e.target.value);
+              setInputNumber(e.target.value);
             }}
             id="nomor-telepon"
             className="block w-full rounded-full border-0 py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-950 sm:text-sm sm:leading-6"
